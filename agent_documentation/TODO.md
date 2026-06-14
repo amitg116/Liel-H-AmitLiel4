@@ -1,50 +1,29 @@
-\# TODO: רשימת משימות לפרויקט המדריך לסוכני AI
+# TODO List: Autonomous Agentic Systems Project
 
+## Phase 1: Infrastructure & Environment Setup
+- [x] Define LaTeX document class (`hebrew-academic-template.cls`).
+- [x] Configure LuaLaTeX environment for Hebrew support and font scaling.
+- [x] Set up directory structure for documentation and technical artifacts.
+- [x] Establish GitHub repository and initial version control hooks.
 
+## Phase 2: Core Architecture Development
+- [x] Implement the three-layer architectural model (CLS, Skill, Agent).
+- [x] Develop MCP-compliant data binding for external systems.
+- [x] Build selective memory buffer for token usage optimization.
 
-\## שלב א': הגדרת תשתית ותיעוד ב-GitHub
+## Phase 3: Analytical Skills & Logic Implementation
+- [x] Integrate WEKA API for automated machine learning tasks.
+- [x] Implement Cosine Similarity algorithms for semantic data retrieval.
+- [x] Configure ReAct loop (Reasoning and Acting) within the Agent layer.
 
-\- \[x] אפיון דרישות המערכת והגדרת תוכן החוברת (`PRD.md`)
+## Phase 4: Validation & Reproducibility Testing
+- [x] Conduct Case Studies 1-25 (Foundational analysis).
+- [x] Conduct Case Studies 26-75 (Stress testing and synthetic workloads).
+- [x] Validate reproducibility metrics against target threshold (0.99+).
+- [ ] Finalize technical appendix with configuration logs.
 
-\- \[x] קביעת ארכיטקטורת הסוכנים ונוהל העבודה הראפטבילי (`PLAN.md`)
-
-\- \[ ] יצירת הריפוזיטורי (Repository) ב-GitHub והעלאת קובצי התיעוד הראשוניים
-
-
-
-\## שלב ב': הכנת סביבת LaTeX המקומית
-
-\- \[ ] הורדה והתקנה של מערכת MiKTeX במחשב (כולל קומפיילר LuaLaTeX)
-
-\- \[ ] הורדת קובץ העיצוב הארגוני `hebrew-academic-template.cls` (גרסה 7.3.0) ומיקומו בתיקיית השורש
-
-
-
-\## שלב ג': ייצור התוכן האוטונומי (החוברת הגדולה)
-
-\- \[ ] הפעלת סוכני התוכן לייצור קוד ה-LaTeX עבור הפרקים השונים (הגעה ל-30 עמודים לפחות)
-
-\- \[ ] שילוב פקודות מותאמות מהתבנית: טבלאות מעוצבות (`fancytable`), קופסאות קוד (`pythonbox`), ותתי-סעיפים בעברית ואנגלית
-
-\- \[ ] בניית רשימת מקורות (ביבליוגרפיה) בפורמט IEEE מובנה
-
-
-
-\## שלב ד': בקרת איכות (QA) והרצת נוהל שחזיר
-
-\- \[ ] הידור כפול בטרמינל באמצעות פקודת `lualatex main.tex`
-
-\- \[ ] סריקת שגיאות וכיווניות טקסט (BiDi)
-
-\- \[ ] תיקון באגים גלובליים דרך קובץ ה-CLS או עדכון ה-Skills (ללא תיקון ידני של ה-PDF!)
-
-
-
-\## שלב ה': הגשה סופית
-
-\- \[ ] העלאת כל קוד המקור (`.tex`), קובץ התבנית (`.cls`) וה-PDF הסופי ל-GitHub
-
-\- \[ ] כתיבת דוח מטלה מפורט בקובץ `README.md` בשורש התיקייה
-
-\- \[ ] מילוי תבנית הוורד של המרצה, שמירה בשם `xxxxxxxx-exyy.pdf` והגשה אישית במודל
-
+## Phase 5: Documentation & Final Submission
+- [x] Finalize LaTeX report structure (50+ pages).
+- [x] Cross-reference all citations and bibliography.
+- [x] Create project documentation (PRD, PLAN, README).
+- [ ] Perform final PDF compilation and quality assurance check.
