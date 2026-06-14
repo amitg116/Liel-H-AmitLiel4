@@ -1,46 +1,35 @@
-# Product Requirements Document (PRD): Autonomous Agentic Systems & MCP Architecture
+# Research Seminar: Autonomous Agentic Systems & MCP Architecture
 
-## 1. Executive Summary
-This project provides a comprehensive architectural analysis of autonomous AI agent systems. It focuses on the transition from static LLM interactions to complex, agentic frameworks, specifically emphasizing the Model Context Protocol (MCP) as a standardized communication layer and the optimization of token economy to ensure enterprise-grade scalability.
+## Project Overview
+This repository contains the complete research documentation, source code, and analysis for the **Autonomous Agentic Systems** seminar project. This research explores the architectural shift from static LLM interactions to autonomous, agentic frameworks, focusing on the **Model Context Protocol (MCP)** for standardized communication, deterministic output reproducibility, and token economy optimization.
 
-## 2. Problem Statement
-Modern enterprises struggle to integrate AI agents due to:
-- **Stochasticity:** Lack of deterministic output in LLM-based systems.
-- **Context Management:** Uncontrolled context window usage leading to data loss.
-- **Economic Inefficiency:** Exponential growth in operational costs due to inefficient token consumption.
-- **Interface Brittleness:** High maintenance costs associated with GUI-based agent navigation.
+## Repository Structure
+- `Amit_Liel_Research_Final.pdf`: The finalized 50+ page academic research report.
+- `main.tex`: Primary source code for the research report (LaTeX).
+- `hebrew-academic-template.cls`: Custom academic class file used for the document structure.
+- `docs/`: Technical documentation and project management artifacts:
+    - `PRD.md`: Product Requirements Document.
+    - `PLAN.md`: Development timeline and project milestones.
+    - `TODO.md`: Technical task list and implementation progress.
 
-## 3. Product Goals
-- Develop a rigid three-layer architecture (Infrastructure, Skill, Agent).
-- Standardize agent communication using the Model Context Protocol (MCP).
-- Establish a reproducible framework for agentic workflows with 99%+ deterministic output.
-- Optimize operational costs by implementing selective memory buffers and semantic retrieval (RAG).
+## Research Highlights
+- **Layered Architecture:** Design and implementation of a three-layer agentic framework (Infrastructure, Skill, Agent).
+- **Deterministic Protocols:** Implementation of the Model Context Protocol (MCP) to minimize interface instability.
+- **Reproducibility:** Analysis of system determinism under varying workloads (Case Studies 1-75).
+- **Token Optimization:** Strategies for cost-efficiency using semantic memory buffers.
 
-## 4. Architectural Layers (The Solution)
-The system is built upon a strict hierarchical design:
-1. **Layer 1: Infrastructure & CLS (Deterministic Design):** Defines the stable boundaries and environment for agent execution.
-2. **Layer 2: Skill Layer (Specialized Expertise):** Utilizes prompt engineering and system instructions to focus agents on narrow, high-precision tasks.
-3. **Layer 3: Agent Layer (Dynamic Execution):** The runtime core utilizing ReAct loops for reasoning and autonomous decision-making.
+## Technical Stack
+- **Document Rendering:** LaTeX (LuaLaTeX).
+- **Agentic Logic:** ReAct (Reasoning and Acting) patterns.
+- **Analytical Tools:** WEKA for predictive modeling and performance validation.
+- **Version Control:** GitHub for infrastructure and code management.
 
-## 5. Functional Requirements
-- **Protocol Integration:** Full implementation of MCP to replace unstable GUI interactions.
-- **Cost Control:** Dynamic token management via selective memory buffers.
-- **Quality Assurance:** Automated audit processes to ensure consistency across execution cycles.
-- **Semantic Retrieval:** Utilizing Cosine Similarity for precise RAG-based data retrieval.
+## Compilation Instructions
+To generate the research report PDF from source:
+1. Ensure all files (`main.tex`, `hebrew-academic-template.cls`) are in the same directory.
+2. Open `main.tex` in your LaTeX editor (e.g., TeXworks).
+3. Use the **LuaLaTeX** engine to compile the document. 
+4. Run the compilation 2-3 times to ensure correct cross-referencing and Table of Contents generation.
 
-## 6. Technical Specifications
-- **Framework:** LaTeX/LuaLaTeX for standardized documentation and code representation.
-- **Data Representation:** Vector embeddings with Cosine Similarity for semantic relevance.
-- **Agentic Logic:** ReAct pattern (Reasoning and Acting) for self-correction.
-- **Communication:** JSON-based MCP structures.
-
-## 7. Performance Metrics
-- **Reproducibility:** A target reproducibility score of >0.99 for repetitive agent tasks.
-- **Efficiency:** A reduction of at least 40% in token consumption through strategic memory management.
-- **Reliability:** Maintain operational continuity even under high-load synthetic traffic simulations.
-
-## 8. Development Roadmap (Plan)
-- Phase 1: Infrastructure and CLS configuration for stable baseline.
-- Phase 2: Skill-layer modularization and prompt optimization.
-- Phase 3: Agent-layer logic implementation and ReAct loop validation.
-- Phase 4: Reproducibility auditing and stress testing (Case Studies 1-75).
+---
+*Submitted as part of the Seminar in Artificial Intelligence Systems, June 2026.*
