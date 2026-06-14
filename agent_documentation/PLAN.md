@@ -1,40 +1,41 @@
-\# PLAN: תוכנית תזמור סוכנים היררכית לייצור המדריך
+# Project Development Plan: Autonomous Agentic Framework
 
+## Overview
+This document outlines the strategic research and development roadmap for the Autonomous Agentic Systems project. The project follows a structured methodology to ensure deterministic results, standardized communication, and scalable agent deployment.
 
+## Roadmap & Milestones
 
-\## 1. מבנה צוות הסוכנים (Hierarchical Orchestration)
+### Phase 1: Architectural Foundation (Infrastructure Layer)
+- **Goal:** Establish a stable, deterministic environment.
+- **Tasks:**
+    - Define the three-layer hierarchical architecture (Infrastructure, Skill, Agent).
+    - Configure the `hebrew-academic-template` (CLS layer) to ensure consistent document rendering and visual stability.
+    - Setup the GitHub repository and version control workflow for all technical artifacts.
 
-\[cite\_start]כדי למנוע עומס על מודל השפה (LLM) ולשמור על דיוק, המערכת תפעל במבנה היררכי הדומה למבנה ארגוני\[cite: 92, 109, 289, 295]:
+### Phase 2: Communication & Skill Integration (Skill Layer)
+- **Goal:** Implement standardized communication and task-specific modularity.
+- **Tasks:**
+    - Replace unstable GUI-based interactions with the **Model Context Protocol (MCP)** for secure data binding.
+    - Develop the Skill Layer, focusing on prompt engineering for high-precision analytical tasks (e.g., QA auditing, financial risk assessment).
+    - Integrate specialized processing modules for semantic analysis and data classification.
 
+### Phase 3: Dynamic Execution & Logic (Agent Layer)
+- **Goal:** Enable autonomous decision-making and efficient resource management.
+- **Tasks:**
+    - Implement the **ReAct (Reasoning and Acting)** loop to enable agent self-correction and multi-step logic.
+    - Deploy a **Selective Memory Buffer** to optimize token usage and prevent context window flooding.
+    - Enforce deterministic output by setting temperature to 0.0 for all analytical cycles.
 
+### Phase 4: Reproducibility & Performance Validation
+- **Goal:** Rigorous testing and performance verification.
+- **Tasks:**
+    - Execute Case Studies 1-25 (Foundational system analysis).
+    - Execute Case Studies 26-75 (Stress testing and synthetic workload validation).
+    - Conduct statistical analysis on Cosine Similarity metrics to verify reproducibility.
+    - Validate performance against KPIs (sub-30ms latency and 40%+ token reduction).
 
-\* \[cite\_start]\*\*Level 0: סוכן מנהל (`qa-super`)\*\* – מנהל העבודה\[cite: 297]. \[cite\_start]הוא מקבל את דרישות ה-PRD, מחלק את הפרקים השונים של המדריך בין סוכני המשנה, ומאחד את הכל לקובץ LaTeX אחד סופי (`main.tex`)\[cite: 228, 231, 293].
-
-\* \[cite\_start]\*\*Level 1: סוכני מטה מתמחים (Family Leads)\*\*\[cite: 297]:
-
-&#x20; \* \[cite\_start]`qa-content-agent` – אחראי על כתיבת התוכן האקדמי המורחב (הגעה ל-30 עמודים לפחות)\[cite: 330].
-
-&#x20; \* \[cite\_start]`qa-table` – מומחה בבניית טבלאות השוואה באמצעות פקודת `fancytable` של התבנית\[cite: 267].
-
-&#x20; \* \[cite\_start]`qa-BiDi` – מומחה בניהול כיווניות טקסט (עברית ואנגלית משולבות) ומניעת היפוכי מילים\[cite: 264, 300].
-
-
-
-\## 2. זרימת עבודה ושמירה על שחזוריות (Reproducible Workflow)
-
-\[cite\_start]כדי לתקן את ליקויי העבר ולהבטיח תהליך הנדסי תקין, המערכת לא תבצע תיקונים ידניים בקובץ ה-PDF הסופי\[cite: 111, 286]. \[cite\_start]אם מתגלה בעיה במהלך ההידור בטרמינל, נפעל לפי "נוהל עבודה ראפטבילי"\[cite: 254, 274, 277]:
-
-
-
-1\. \[cite\_start]קומפילציה כפולה בטרמינל באמצעות הפקודה `lualatex main.tex` לצורך יצירת תוכן עניינים תקין\[cite: 248, 249].
-
-2\. \[cite\_start]סריקת פלט הטרמינל לאיתור שגיאות או אזהרות עיצוב (כמו `hbox` / `vbox`)\[cite: 306].
-
-3\. \[cite\_start]\*\*חשיבה מחוץ לקופסה - ניתוח שורש הבעיה:\*\* הסוכן המנהל ינתח האם הטעות נובעת מחוקי העיצוב או מהתוכן\[cite: 279, 281, 282]:
-
-&#x20;  \* \[cite\_start]אם הבעיה היא בטקסט או בניסוח -> נעדכן את ה-\*\*Skill\*\* של הסוכן הרלוונטי\[cite: 282].
-
-&#x20;  \* \[cite\_start]אם הבעיה היא בעיצוב, שוליים או כיווניות -> נעדכן את קובץ התבנית הארגוני \*\*`hebrew-academic-template.cls`\*\*\[cite: 101, 253, 283].
-
-4\. \[cite\_start]הרצה חוזרת של פס הייצור האוטונומי עד לקבלת תוצר מושלם ודטרמיניסטי\[cite: 111, 284, 287].
-
+## Methodology & Workflow
+To ensure system stability and reproducibility, the following workflow is enforced:
+1. **Compilation:** Use `LuaLaTeX` for deterministic document and code generation.
+2. **Error Handling:** Systematically scan logs for `hbox` or `vbox` warnings; errors are addressed by refining either the Skill Layer prompts or the Infrastructure Layer templates.
+3. **Version Control:** Every change to the core `main.tex` or `template.cls` is documented via GitHub commits, allowing for systematic rollback to stable versions.
